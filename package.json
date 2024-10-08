@@ -1,0 +1,30 @@
+{
+	"name": "will-shopify-starter",
+	"version": "1.0.0",
+	"description": "Shopify + Vite + Tailwind starter",
+	"type": "module",
+	"main": "frontend/main.js",
+	"scripts": {
+		"dev": "run-p -sr \"shopify:dev -- {@}\" \"vite:dev\" --",
+		"deploy": "run-s \"vite:build\" \"shopify:push -- {@}\" --",
+		"shopify:dev": "shopify theme dev",
+		"shopify:push": "shopify theme push",
+		"vite:dev": "vite",
+		"vite:build": "vite build"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@vitejs/plugin-basic-ssl": "^1.0.2",
+		"autoprefixer": "^10.4.20",
+		"cross-env": "^7.0.3",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.47",
+		"sass": "^1.52.2",
+		"tailwindcss": "^3.4.13",
+		"tsconfig": "^7.0.0",
+		"vite": "^5.4.8",
+		"vite-plugin-page-reload": "^0.2.0",
+		"vite-plugin-shopify": "^3.0.1"
+	}
+}
